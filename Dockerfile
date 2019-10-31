@@ -6,7 +6,7 @@ RUN apk add --no-cache cmake g++ protobuf protobuf-dev make
 WORKDIR /build
 RUN wget https://github.com/google/sentencepiece/archive/v0.1.84.tar.gz && \
     tar xzf v0.1.84.tar.gz && cd sentencepiece-0.1.84 && mkdir build && cd build && \
-    cmake .. && make -j && make install && rm -rf /build
+    cmake .. && make -j2 && make install && rm -rf /build
 
 WORKDIR /home
 
