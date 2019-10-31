@@ -12,5 +12,5 @@ WORKDIR /home
 
 FROM alpine:latest
 RUN apk add --no-cache libgcc libstdc++
-COPY --from=0 /usr/local/lib/libsentencepiece.so.0 /usr/local/lib/
+COPY --from=0 /usr/local/lib/libsentencepiece*.so.0 /usr/local/lib/
 COPY --from=0 /usr/local/bin/spm_* /usr/local/bin/
